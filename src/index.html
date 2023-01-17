@@ -1,0 +1,12 @@
+<h1>Hi I'm Kumar Gaurav</h1>
+
+<div class="counter">
+  You are visitor number: <span id="countervalue"></span>
+</div>
+<script>
+  fetch("/visit")
+    .then((response) => response.json())
+    .then((value) => {
+      document.getElementById("countervalue").innerHTML = value;
+    });
+</script>
